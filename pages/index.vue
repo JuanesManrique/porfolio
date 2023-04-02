@@ -1,14 +1,9 @@
 <template>
   <Circles />
   <div class="w-full h-screen flex justify-center fixed z-10 overflow-auto" style="background: var(--negro-7);">
-    <div class="max-w-5xl w-full grid" style="grid-template-rows: auto 1fr auto;">
+    <div class="max-w-7xl w-full grid" style="grid-template-rows: auto 1fr auto;">
       <LayoutNavbar />
-      <div class="">
-        <div class="w-full flex flex-col justify-center items-center font-semibold " style="height: 80vh;">
-          <p class=" text-7xl opacity-90">Juan Sanchez</p>
-          <p class=" text-7xl opacity-90">Frontend Developer</p>
-        </div>
-      </div>
+      <NuxtPage />
       <LayoutFooter />
     </div>
   </div>
@@ -47,6 +42,27 @@ body {
     --negro: #e0e0e0;
     --negro-5: rgba(255, 255, 255, 0.5);
     --negro-7: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.texto{
+  transition: all .3s linear;
+  animation: aparecer 2s ease .6s 1 both;
+}
+
+.texto ::backdrop{
+  color: blue;
+}
+
+@keyframes aparecer {
+  0% {
+    transform: translateY(1em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>
