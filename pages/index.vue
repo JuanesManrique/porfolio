@@ -21,8 +21,8 @@
 body {
   font-family: Montserrat,sans-serif;
   min-height: 100vh;
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: #181818;
+  color:#e0e0e0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,16 +33,6 @@ body {
   --negro: #181818;
   --negro-5: rgba(0, 0, 0, 0.5);
   --negro-7: rgba(0, 0, 0, 0.75);
-}
-
-@media screen and (prefers-color-scheme:light){
-  :root {
-    --blanco: #181818;
-    --blanco-2: rgba(0,0,0,.2);
-    --negro: #e0e0e0;
-    --negro-5: rgba(255, 255, 255, 0.5);
-    --negro-7: rgba(255, 255, 255, 0.75);
-  }
 }
 
 .texto{

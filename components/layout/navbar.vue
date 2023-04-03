@@ -10,7 +10,9 @@
           <nuxt-link to="/about">ABOUT</nuxt-link>
         </li>
         <li class=" opacity-80 cursor-pointer transition-all hover:opacity-100 hover:scale-105">PROJECTS</li>
-        <li class=" opacity-80 cursor-pointer transition-all hover:opacity-100 hover:scale-105">JOBS</li>
+        <li class=" opacity-80 cursor-pointer transition-all hover:opacity-100 hover:scale-105">
+          <nuxt-link to="/jobs">JOBS</nuxt-link>
+        </li>
       </ul>
     </div>  
   </div>
