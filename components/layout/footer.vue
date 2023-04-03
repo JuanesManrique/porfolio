@@ -3,9 +3,15 @@
     <div class="shadow__cards px-10 w-full h-20 flex justify-between items-center rounded-2xl" style="background-color: var(--negro);">
       <p class="text-xl font-black opacity-80 uppercase">contact</p>
       <div class="flex gap-5">
-        <Icon name="ion:logo-instagram" class="text-3xl"/>
-        <Icon name="mdi:github" class="text-3xl"/>
-        <Icon name="bi:linkedin" class="text-3xl"/>
+        <a href="https://www.instagram.com/juanemanrique/" target="_blank">
+          <Icon name="ion:logo-instagram" class="text-3xl"/>
+        </a>
+        <a href="https://github.com/JuanesManrique" target="_blank">
+          <Icon name="mdi:github" class="text-3xl"/>
+        </a>
+        <a href="https://www.linkedin.com/in/juan-sanchezm" target="_blank">
+          <Icon name="bi:linkedin" class="text-3xl"/>
+        </a>
       </div>
     </div>
   </div>
