@@ -1,6 +1,6 @@
 <template>
-  <div class="pb-5 w-full">
-    <div class="shadow__cards px-10 w-full h-20 flex justify-between items-center rounded-2xl" style="background-color: var(--negro);">
+  <div class="pb-5 px-5 xl:px-0 w-full transition-all">
+    <div class="shadow__cards px-10 w-full h-20 hidden md:flex justify-between items-center rounded-2xl" style="background-color: var(--negro);">
       <p class="text-xl font-black opacity-80 uppercase">contact</p>
       <div class="flex gap-5">
         <a href="https://www.instagram.com/juanemanrique/" target="_blank">

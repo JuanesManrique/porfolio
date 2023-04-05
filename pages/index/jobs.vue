@@ -1,13 +1,20 @@
 <template>
-  <div class="about__container py-20 w-full h-full flex justify-between items-center gap-20">
-    <div class="shadow__cards p-10 w-1/2 h-full flex flex-col justify-center rounded-2xl" style="background-color: var(--negro);">
-      
+  <div class="about__container px-5 xl:px-0 pb-20 md:py-20 w-full h-full flex flex-col md:flex-row items-center gap-5 lg:gap-20">
+    <div class="shadow__cards p-10 w-full md:w-1/2 h-1/2 md:h-full rounded-2xl" style="background-color: var(--negro);">
+      <template class=" h-full" v-for="job in jobs" :key="job.id">
+        <Info v-if="selected === job.id">
+          <template #title>{{ job.title }}</template>
+          <template #subtitle>{{ job.subtitle }}</template>
+          <template #description>{{ job.description }}</template>
+          <template #skills><strong>Skills: </strong>{{ job.skills }}</template>
+        </Info>
+      </template>
     </div>
 
-    <div class="shadow__cards bg-blanco w-1/2 h-full rounded-2xl">
-      <div class="w-full h-full flex justify-center items-end gap-4">
-        <template v-for="n in 3">
-          <button class="text-negro rounded-lg">{{ n }}</button>
+    <div class="shadow__cards bg-blanco w-full md:w-1/2 h-1/2 md:h-full rounded-2xl relative">
+      <div class="w-full flex justify-center items-center top-4 md:top-3/4 md:-bottom-16 absolute gap-4">
+        <template v-for="n in 4">
+          <button @click="setJob(n)" class="py-1 px-3 font-bold text-negro bg-negro bg-opacity-20 shadow-lg rounded-lg transition-all transform hover:scale-125">{{ n }}</button>
         </template>
       </div>
     </div>
@@ -16,6 +23,44 @@
 
 <script setup>
 
+
+const selected = ref(1)
+const jobs = ref([
+  {
+    id: 1,
+    title: 'HelpCreaciones SAS' ,
+    subtitle: 'Frontend Developer',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
+    skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Hojas de estilos en cascada (CSS) · HTML5'
+  },
+  {
+    id: 2,
+    title: 'Datain' ,
+    subtitle: 'Frontend Developer',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
+    skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Node.js · Diseño web · Hojas de estilos en cascada (CSS) · HTML5 · Diseño de la interfaz de usuario'
+  },
+  {
+    id: 3,
+    title: 'Nodoland' ,
+    subtitle: 'Frontend Developer',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
+    skills: 'Cypress.io · Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Hojas de estilos en cascada (CSS) · HTML5'
+  },
+  {
+    id: 4,
+    title: 'Frutos del Campo CTA' ,
+    subtitle: 'Frontend Developer',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
+    skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Diseño web · Hojas de estilos en cascada (CSS) · HTML5 · Diseño de la interfaz de usuario · Bootstrap'
+  },
+])
+
+function setJob(index) {
+  selected.value = index
+  console.log(selected.value);
+  
+}
 
 </script>
 

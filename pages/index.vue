@@ -20,7 +20,7 @@
 
 body {
   font-family: Montserrat,sans-serif;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #181818;
   color:#e0e0e0;
   -webkit-font-smoothing: antialiased;

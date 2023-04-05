@@ -1,12 +1,12 @@
 <template>
-  <div class="about__container py-20 w-full h-full flex justify-between items-center gap-20">
-    <div class="shadow__cards p-10 w-1/2 h-full flex flex-col justify-center rounded-2xl" style="background-color: var(--negro);">
-      <p class="mb-5 text-3xl font-black">Juan Esteban Sanchez Manrique</p>
-      <p class="mb-3 text-lg">Soy un programador Front-end Developer con experiencia en desarrollos web con Vue.js empleando habilidades de estilos con tailwind, pruebas con Cypress.io, API REST y demas tecnologias complementarias al desarrollo front-end.</p>
-      <p class="text-lg">Además de ser programador tambien entreno Capoeira, un arte marcial afro-brasileña en el cual llevo 11 años donde he participado en diversos eventos y campeonatos nacionales con el grupo Capoeira Nativos.</p>
+  <div class="about__container px-5 xl:px-0 pb-12 md:py-20 w-full h-full flex flex-col md:flex-row items-center gap-10 lg:gap-20">
+    <div class="shadow__cards p-10 w-full md:w-1/2 h-1/2 md:h-full  flex flex-col justify-center rounded-2xl" style="background-color: var(--negro);">
+      <p class="mb-5 text-xl lg:text-3xl text-center md:text-start font-black">Juan Esteban Sanchez Manrique</p>
+      <p class="mb-3 text-sm lg:text-lg">Soy un programador Front-end Developer con experiencia en desarrollos web con Vue.js empleando habilidades de estilos con tailwind, pruebas con Cypress.io, API REST y demas tecnologias complementarias al desarrollo front-end.</p>
+      <p class="text-sm  lg:text-lg">Además de ser programador tambien entreno Capoeira, un arte marcial afro-brasileña en el cual llevo 11 años donde he participado en diversos eventos y campeonatos nacionales con el grupo Capoeira Nativos.</p>
     </div>
     <!-- <img src="../../assets/foto.jpg" alt="" class="shadow__cards img__about w-1/2 h-full rounded-2xl"> -->
-    <div class="shadow__cards card__img w-1/2 h-full rounded-2xl">
+    <div class="shadow__cards card__img w-full md:w-1/2 h-1/2 md:h-full rounded-2xl">
       <!-- <img src="../../assets/foto.jpg" alt="" class="shadow__cards w-1/2 h-full rounded-2xl"> -->
     </div>
   </div>
