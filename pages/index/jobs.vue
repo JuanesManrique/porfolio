@@ -30,35 +30,34 @@ const jobs = ref([
     id: 1,
     title: 'HelpCreaciones SAS' ,
     subtitle: 'Frontend Developer',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
-    skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Hojas de estilos en cascada (CSS) · HTML5'
+    description: 'Me desempeño en el desarrollo frontend de una PWA encargada de mantener en orden el inventario de las polizas de todo tipo para el cliente y el dashboard que administra la data de la web junto con el equipo de desarrollo',
+    skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Hojas de estilos en cascada (CSS) · HTML5 - Supabase'
   },
   {
     id: 2,
     title: 'Datain' ,
     subtitle: 'Frontend Developer',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
+    description: 'Se realizó diseño IU, desarrollo web de la landing page, desarrollo frontend y backend de dashboard para un cliente de la empresa.',
     skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Node.js · Diseño web · Hojas de estilos en cascada (CSS) · HTML5 · Diseño de la interfaz de usuario'
   },
   {
     id: 3,
     title: 'Nodoland' ,
     subtitle: 'Frontend Developer',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
+    description: 'Se realizó un desarrollo frontend en la landing page y dashboard con la metodologia agil SCRUM',
     skills: 'Cypress.io · Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Hojas de estilos en cascada (CSS) · HTML5'
   },
   {
     id: 4,
     title: 'Frutos del Campo CTA' ,
     subtitle: 'Frontend Developer',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate itaque, accusamus dolores delectus dolor est dignissimos neque fugit laboriosam. Non corrupti facere neque mollitia autem voluptatum dolorem tempora amet veniam!',
+    description: 'Se realizó diseño IU y desarrollo web de la landing page.',
     skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Diseño web · Hojas de estilos en cascada (CSS) · HTML5 · Diseño de la interfaz de usuario · Bootstrap'
   },
 ])
 
 function setJob(index) {
   selected.value = index
-  console.log(selected.value);
   
 }
 
