@@ -7,7 +7,7 @@
     <div class="w-full rounded-3xl relative ">
       <video class="opacity-0" preload="metadata" src="../../assets/video.mp4"></video>
     </div>
-    <div class="w-full rounded-3xl relative">
+    <div class="hidden md:block w-full rounded-3xl relative">
       <video class="opacity-0" preload="metadata" src="../../assets/video.mp4"></video>
     </div>
   </div>
@@ -43,6 +43,12 @@ function pauseVideo(v) {
     grid-template-columns: repeat(auto-fit,minmax(30em,1fr));
     grid-gap: 2em;
     gap: 2em;
+  }
+
+  @media (max-width: 540px) {
+    .main__container{
+      grid-template-columns: repeat(auto-fit,minmax(15em,1fr));
+    }
   }
 
   .project{
