@@ -1,14 +1,27 @@
 <template>
   <div class="main__container py-5 m-auto min-h-full grid">
+    <!-- <div v-for="(project, index) in projects" :key="index" class="project w-full rounded-3xl relative">
+      <video :ref="`video_${project.name}`" @mouseleave="pauseVideo(project.)" @mouseover="playVideo(project.)" class="project__video" muted loop playsinline preload="metadata" src="../../assets/video-portafolio.mp4" poster="../../assets/foto-portafolio.png"></video>
+      <p class="project__title">{{project.name.charAt(0).toUpperCase() + project.name.slice(1)}}</p>
+    </div> -->
     <div class="project w-full rounded-3xl relative">
-      <video ref="video" @mouseleave="pauseVideo(video)" @mouseover="playVideo(video)" class="project__video" muted playsinline preload="metadata" src="../../assets/video.mp4"></video>
+      <video ref="video1" @mouseleave="pauseVideo(video1)" @mouseover="playVideo(video1)" class="project__video" muted loop playsinline preload="metadata" src="../../assets/video-portafolio.mp4" poster="../../assets/foto-portafolio.png"></video>
       <p class="project__title">Portafolio</p>
     </div>
-    <div class="w-full rounded-3xl relative ">
-      <video class="opacity-0" preload="metadata" src="../../assets/video.mp4"></video>
+    <div class="project w-full rounded-3xl relative">
+      <video ref="video2" @mouseleave="pauseVideo(video2)" @mouseover="playVideo(video2)" class="project__video" muted loop playsinline preload="metadata" src="../../assets/video-talk2learn.mp4" poster="../../assets/foto-talk2learn.png"></video>
+      <p class="project__title">Talk2learn <br><strong>(landing page)</strong></p>
+    </div>
+    <div class="project w-full rounded-3xl relative">
+      <video ref="video3" @mouseleave="pauseVideo(video3)" @mouseover="playVideo(video3)" class="project__video" muted loop playsinline preload="metadata" src="../../assets/video-datain.mp4" poster="../../assets/foto-datain.png"></video>
+      <p class="project__title">Datain <br><strong>(landing page)</strong></p>
+    </div>
+    <div class="project w-full rounded-3xl relative">
+      <video ref="video4" @mouseleave="pauseVideo(video4)" @mouseover="playVideo(video4)" class="project__video" muted loop playsinline preload="metadata" src="../../assets/video-frutosdelcampo.mp4" poster="../../assets/foto-frutosdelcampo.png"></video>
+      <p class="project__title">Frutos del Campo <br><strong>(landing page)</strong></p>
     </div>
     <div class="hidden md:block w-full rounded-3xl relative">
-      <video class="opacity-0" preload="metadata" src="../../assets/video.mp4"></video>
+      <video class="opacity-0" preload="metadata" src="../../assets/video-portafolio.mp4"></video>
     </div>
   </div>
 </template>
@@ -16,19 +29,27 @@
 <script setup>
 import { ref } from 'vue'
 
-const video = ref()
+const video1 = ref()
+const video2 = ref()
+const video3 = ref()
+const video4 = ref()
 const autoplay = ref(false)
 
 const projects = ref([
   {
-    id: 1,
-    name:'Portafolio',
+    name:'portafolio',
+    url: 'https://porfolio-juanesmanrique.vercel.app',
+    video_portafolio: null
+  },
+ /*  {
+    name:'talk2learn',
     url: 'https://porfolio-juanesmanrique.vercel.app'
-  }
+  }, */
 ])
 
 function playVideo(v) {
   v.play()
+  /* console.log(v); */
 }
 
 function pauseVideo(v) {
@@ -82,16 +103,22 @@ function pauseVideo(v) {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: clamp(1em,60vw,2.5em);
+    font-size: 40px;
     font-weight: 900;
     text-align: center;
     font-style: italic;
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-shadow: 0 0 1em #000;
     z-index: 3;
     pointer-events: none;
+  }
+
+  @media (max-width: 600px) {
+    .project__title{
+      font-size: 30px;
+    }
   }
 </style>
