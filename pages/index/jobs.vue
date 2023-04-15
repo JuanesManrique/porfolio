@@ -1,5 +1,5 @@
 <template>
-  <div class="about__container px-5 xl:px-0 pb-20 md:py-20 w-full h-full flex flex-col md:flex-row items-center gap-5 lg:gap-20">
+  <div class="about__container px-5 xl:px-0 md:py-20 w-full h-full flex flex-col md:flex-row items-center gap-5 lg:gap-20">
     <div class="shadow__cards p-10 w-full md:w-1/2 h-1/2 md:h-full rounded-2xl" style="background-color: var(--negro);">
       <template class=" h-full" v-for="job in jobs" :key="job.id">
         <Info v-if="selected === job.id">
@@ -11,7 +11,10 @@
       </template>
     </div>
 
-    <div class="shadow__cards bg-blanco w-full md:w-1/2 h-1/2 md:h-full rounded-2xl relative">
+    <div class="shadow__cards bg-blanco w-full md:w-1/2 h-1/2 md:h-full flex justify-center items-center rounded-2xl relative">'
+      <template v-for="job in jobs" :key="job.id">
+        <img v-if="selected === job.id" :src="`job_${selected}.png`" alt="project-image" class="texto w-3/4 object-center">
+      </template>
       <div class="w-full flex justify-center items-center top-4 md:top-3/4 md:-bottom-16 absolute gap-4">
         <template v-for="n in 4">
           <button @click="setJob(n)" class="py-1 px-3 font-bold text-negro bg-negro bg-opacity-20 shadow-lg rounded-lg transition-all transform hover:scale-125">{{ n }}</button>
