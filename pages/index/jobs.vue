@@ -34,7 +34,7 @@ const jobs = ref([
     title: 'HelpCreaciones SAS' ,
     subtitle: 'Frontend Developer',
     description: 'Me desempeño en el desarrollo frontend de una PWA encargada de mantener en orden el inventario de las polizas de todo tipo para el cliente y el dashboard que administra la data de la web junto con el equipo de desarrollo',
-    skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Hojas de estilos en cascada (CSS) · HTML5 - Supabase'
+    skills: 'Vue.js · Desarrollo Front-end · JavaScript · Git · Figma · Tailwind · Hojas de estilos en cascada (CSS) · HTML5 · Supabase'
   },
   {
     id: 2,

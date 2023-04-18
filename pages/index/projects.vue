@@ -20,9 +20,6 @@
       <video ref="video4" @mouseleave="pauseVideo(video4)" @mouseover="playVideo(video4)" class="project__video" muted loop playsinline preload="metadata" src="../../assets/video-frutosdelcampo.mp4" poster="../../assets/foto-frutosdelcampo.png"></video>
       <p class="project__title">Frutos del Campo <br><strong>(landing page)</strong></p>
     </div>
-    <div class="hidden md:block w-full rounded-3xl relative">
-      <video class="opacity-0" preload="metadata" src="../../assets/video-portafolio.mp4"></video>
-    </div>
   </div>
 </template>
 
